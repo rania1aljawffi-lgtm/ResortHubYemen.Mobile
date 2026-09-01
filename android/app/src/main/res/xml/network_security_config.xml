@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Network Security Configuration for ResortHub Yemen Mobile.
+  Allows cleartext HTTP only to the local development server (192.168.8.192).
+  All other hosts are governed by the default policy (HTTPS required).
+  This file is referenced from AndroidManifest.xml and affects debug builds only.
+-->
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <!-- Local development ASP.NET Core API server -->
+        <domain includeSubdomains="false">192.168.8.192</domain>
+        <!-- Android emulator host alias -->
+        <domain includeSubdomains="false">10.0.2.2</domain>
+        <!-- Localhost for Flutter Web -->
+        <domain includeSubdomains="false">localhost</domain>
+        <domain includeSubdomains="false">127.0.0.1</domain>
+    </domain-config>
+</network-security-config>
